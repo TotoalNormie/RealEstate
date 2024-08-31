@@ -1,0 +1,254 @@
+/* 
+Theme Name: Real Estate
+Description: A WordPress theme for real estate and house construction websites
+Version: 1.2
+Tags: real estate, house, house construction,
+*/
+@import url('https://fonts.googleapis.com/css?family=Titillium%20Web:700|Orienta:400');
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--text: #091111;
+	--background: #f0faf9;
+	--primary: #3d2bde;
+	--secondary: #8491f6;
+	--accent: #849de3;
+}
+
+body {
+	font-family: 'Orienta';
+	font-weight: 400;
+	color: var(--text);
+	background-color: var(--background);
+	margin: 0;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100svh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Titillium Web';
+	font-weight: 700;
+}
+
+html {
+	font-size: 100%;
+} /* 16px */
+
+h1 {
+	font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+	font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+	font-size: 2.369rem; /* 37.92px */
+}
+
+a {
+	color: var(--accent);
+}
+
+h4 {
+	font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+	font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+	font-size: 0.75rem; /* 12px */
+}
+
+hr {
+	border: 1px solid var(--text);
+}
+
+main {
+	width: min(44rem, 100%);
+	margin: 1rem auto 10rem;
+	padding: 1rem;
+}
+
+main.wider {
+	width: min(64rem, 100%);
+}
+
+main img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* max-height: 50vh; */
+}
+
+.border-radius-05 {
+	border-radius: 0.5rem;
+}
+.project-archive-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+.project-archive-item {
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid var(--text);
+	gap: 1rem;
+}
+
+.project-archive-item img {
+	width: 100%;
+}
+
+.project-archive-item h2 {
+	margin: 0;
+}
+
+@media screen and (max-width: 44rem) {
+	.project-archive-item {
+		grid-template-columns: 1fr;
+	}
+}
+
+.columns {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	padding: 1rem;
+	gap: 1rem;
+	margin-top: 3rem;
+}
+
+.columns > :first-child {
+	padding-right: 1rem;
+	border-right: 2px solid var(--text);
+}
+
+.columns > :last-child {
+	width: max-content;
+}
+
+.post-title {
+	text-align: center;
+}
+
+@media screen and (max-width: 60rem) {
+	.columns > :last-child {
+		width: fit-content;
+	}
+}
+
+@media screen and (max-width: 40rem) {
+	.columns {
+		grid-template-columns: 1fr;
+	}
+	.columns > :first-child {
+		border-right: none;
+		padding-right: none;
+		border-bottom: 2px solid var(--text);
+		padding-bottom: 1rem;
+	}
+
+	.columns > :last-child {
+		width: 100%;
+	}
+}
+
+.project-archive-filter {
+	display: flex;
+	gap: 1rem;
+	padding: 3rem 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+	border-bottom: 1px solid var(--text);
+	margin-bottom: 1rem;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	font-family: 'Orienta';
+	font-weight: 400;
+	background-color: transparent;
+	transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+	border: 0.1rem solid gray;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+}
+
+button:hover {
+	color: var(--background);
+	background-color: gray;
+}
+
+button.active {
+	color: var(--background);
+	background-color: var(--accent);
+	border-color: var(--accent);
+}
+
+a.primary,
+button.primary {
+	background-color: var(--primary);
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	text-decoration: none;
+	transition: background-color 0.3s ease-in-out;
+}
+
+a.primary:hover,
+button.primary:hover {
+	background-color: var(--secondary);
+}
+
+a.secondary,
+button.secondary {
+	color: var(--primary);
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	border: 0.1rem solid var(--primary);
+	text-decoration: none;
+	transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+a.secondary:hover,
+button.secondary:hover {
+	color: var(--secondary);
+	border: 0.1rem solid var(--secondary);
+}
+a:has(article) {
+	text-decoration: none !important;
+	color: var(--text);
+}
+
+.gray {
+	color: gray;
+}
+
+.price {
+	color: var(--background);
+	font-weight: 700;
+	background-color: var(--text);
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+}
+
+.price-wrapper {
+	display: flex;
+	justify-content: flex-end;
+}
